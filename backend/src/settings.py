@@ -80,6 +80,18 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+
+    # PARA TRABAJAR CON POSTGRES 
+    #
+    #'default': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'hospital_unsa',
+    #    'USER': 'episunsa',
+    #    'PASSWORD': 'episunsa',
+    #    'HOST': 'localhost',
+    #    'PORT': '5432',
+    #}
+
 }
 
 
