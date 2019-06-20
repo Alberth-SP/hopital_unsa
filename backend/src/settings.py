@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    
+    #APPS CREADAS
+    'apps.Administrador',
+    'apps.Admision',
+    'apps.Consultorio',
+    'apps.Laboratorio',
 ]
 
 MIDDLEWARE = [
@@ -77,24 +83,20 @@ WSGI_APPLICATION = 'src.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hospital_unsa_03', #cambiar por el nombre de tu BD
+        'USER': 'darwin', #TU USUARIO POSTGRES
+        'PASSWORD': 'root', # TU CONTRASEÑA POSTGRES
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
-
-    # PARA TRABAJAR CON POSTGRES 
-    #
+}
     #'default': {
-    #    'ENGINE': 'django.db.backends.postgresql',
-    #    'NAME': 'hospital_unsa',
-    #    'USER': 'episunsa',
-    #    'PASSWORD': 'episunsa',
-    #    'HOST': 'localhost',
-    #    'PORT': '5432',
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
 
-}
-
-
+    # PARA TRABAJAR CON POSTGRES 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
