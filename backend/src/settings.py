@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    
-    #APPS CREADAS
+
+    # APPS CREADAS
     'apps.Administrador',
     'apps.Admision',
     'apps.Consultorio',
@@ -81,22 +81,24 @@ WSGI_APPLICATION = 'src.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# Base de datos en Heroku
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'hospital_unsa_03', #cambiar por el nombre de tu BD
-        'USER': 'darwin', #TU USUARIO POSTGRES
-        'PASSWORD': 'root', # TU CONTRASEÑA POSTGRES
-        'HOST': 'localhost',
+        'NAME': 'd42r82jmliqvpn',
+        'USER': 'bebtrgvtzubqit',
+        'PASSWORD': '7442db242131d73e52968ca6ba048594ba3ee417d7deb93aa51a30de3838be8b',
+        'HOST': 'ec2-107-20-230-70.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
-    #'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #}
+# 'default': {
+#    'ENGINE': 'django.db.backends.sqlite3',
+#    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+# }
 
-    # PARA TRABAJAR CON POSTGRES 
+# PARA TRABAJAR CON POSTGRES
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
