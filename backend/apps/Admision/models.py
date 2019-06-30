@@ -50,6 +50,7 @@ class Paciente(models.Model):
     provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE)
     #FK Departamento
     departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
+
     dni = models.IntegerField()
     nombres = models.CharField(max_length=30)
     apellido_paterno = models.CharField(max_length=30)
