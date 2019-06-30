@@ -12,7 +12,7 @@ class HorarioCab(models.Model):
 
 class HorarioDet(models.Model):
     #FK HORARIO
-    codigoHor= models.OneToOneField(HorarioCab, on_delete=models.CASCADE)
+    codigoHor = models.OneToOneField(HorarioCab, on_delete=models.CASCADE)
     #FK PERSONAL
     personal = models.ForeignKey(Personal, on_delete=models.CASCADE)
     dia = models.IntegerField()
@@ -69,8 +69,7 @@ class Paciente(models.Model):
     email = models.EmailField(unique=True)
     estReg = models.CharField(max_length=1)
 
-class  HistoriaCab(models.Model):
+class HistoriaCab(models.Model):
     numeroHistoria = models.IntegerField(primary_key=True)
     #FK PACIENTE
     paciente = models.OneToOneField(Paciente, on_delete=models.CASCADE)
-   
