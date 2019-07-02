@@ -16,7 +16,16 @@ export class MenuNavComponent implements OnInit {
 				label: 'Modulo Admision',
 				icon: 'pi pi-fw pi-file',
 				command: (onclick)=> {console.log("funciona xD")},
-				items: [{
+				items: [
+					{
+						label: 'Buscar Historial',
+						icon: 'pi pi-search',
+						routerLink:['./buscarhistorial'],
+						command: (onclick)=> {console.log("Buscar xD")}
+
+						
+					},
+					{
 					label: 'Buscar Historia Clinica',
 					icon: 'pi pi-search',
 					//submenus 

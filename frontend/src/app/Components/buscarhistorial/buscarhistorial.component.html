@@ -1,0 +1,148 @@
+
+<!--
+<select [(ngModel)]="opcionSeleccionado" (change)="capturar()">
+    <option value="0">Selecciona una opción</option>
+    <option *ngFor="let dato of datos">
+      {{datos}}
+    </option>
+</select>
+
+<p [hidden]="opcionSeleccionado == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p>->
+
+
+<!BUSCAR CITA-->
+<style>
+	table {
+		font-family: arial, sans-serif;
+		border-radius: 5px;
+		width: 100%;
+	}
+
+	td,
+	th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	}
+
+	tr:nth-child(even) {
+		background-color: #dddddd;
+    }
+
+    .button {
+        background-color: #467DEC; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        font-family: "verdana";
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        }
+
+        .ve{
+            color:black;
+            font-family: verdana;
+            font-size: 200%;
+        }
+            
+        .button1:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+
+
+        .modi:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+    
+        input {
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 5px;
+        border: 1px solid #CED4E0;
+        padding: 0 4px 0 4px;
+        }
+     td { border: 0; }
+
+     .op {
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 5px;
+        border: 1px solid #CED4E0;
+        padding: 0 4px 0 4px;
+        font-family: verdana;
+        height: 30px;
+        }
+</style>
+<script> </script>
+<br><br>
+
+<h1 align=center> MÓDULO DE ADMISIÓN  </h1>
+<br><br>
+<h1 class="ve">Buscar Historial</h1>
+<table bordercolor="#FFFFFF">
+        
+          <tr>
+        
+            <td >
+                <select class="op"name="singleSelect" ng-model="data.singleSelect">
+                    <option value="numHistoria">Numero de Historia</option>
+                    <option value="nombrepac">Nombre de paciente</option> 
+                </select>
+            </td>        
+            <td >
+                 <span class="ui-float-label">
+                <input id="capturabusqueda" type="text" size="80" pInputText> 
+                <label for="float-input" font-size=100% >Ingrese los datos de la opción elegida</label>
+                 </span>                         
+            </td>
+            <td >
+                <button class="button button1" (click)="clickbuscar()" > BUSCAR</button>
+            </td>
+        
+        
+          </tr>
+        
+      
+        
+        </table>
+
+
+<br><br>
+
+<h3>Datos del Paciente</h3> 
+
+<table>
+	<tr>
+		<th>Paciente</th>
+		<th>DNI</th> 
+
+	</tr>
+	<tr>
+			<td>{{ paciente }}</td>
+			<td>{{ dni }}</td>
+<!-- 
+            <td><button class="button modi" (click)="clickcrear()" >{{Crear Cita}}</button></td> -->
+            
+
+	</tr>
+ 
+</table>
+<br><br>
+<br><br>
+
+ 
+
+<!--FIN BUSCAR CITA--> 
+  
+
+
+
+
+

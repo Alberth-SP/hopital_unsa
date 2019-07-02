@@ -13,12 +13,14 @@ import {SidebarModule} from 'primeng/sidebar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {SlideMenuModule} from 'primeng/slidemenu';
 import { HomeComponent } from './Components/Hosp_Page/home/home.component';
+import { BuscarhistorialComponent } from './Components/buscarhistorial/buscarhistorial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuNavComponent,
-    HomeComponent
+	HomeComponent,
+	BuscarhistorialComponent
   ],
   imports: [
     BrowserModule,
