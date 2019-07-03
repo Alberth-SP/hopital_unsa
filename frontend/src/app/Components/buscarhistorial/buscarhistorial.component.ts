@@ -26,11 +26,11 @@ export class BuscarhistorialComponent implements OnInit {
         alert("Buscando ... ");
         this.paciente="PACIENTE";
         this.dni="DNI";
-        this.crear="Crear Cita";
+        this.crear="Crear";
   }
 
   clickcrear(){
-    alert("Crear Cita")
+    alert("Crear")
   }
 
 }

@@ -28,15 +28,13 @@ export class MenuNavComponent implements OnInit {
 					{
 					label: 'Buscar Historia Clinica',
 					icon: 'pi pi-search',
-					//submenus 
-					items: [
-						{ label: 'No se que mas poner xD' },
-						{ label: 'Holi' },
-					]
+					routerLink:['./buscarhistorial']
+					
 				},
 				{ label: 'Crear Historia Clinica' },
 				{ separator: true },
-				{ label: 'Quit' }
+				{ label: 'Quit' },
+				
 				]
 			},
 			{
@@ -56,6 +54,7 @@ export class MenuNavComponent implements OnInit {
 			// ejemplo de tuteo desde el menu, antes deben agregarlos en app-routing.module
 			{
 				label: 'Home', icon: 'pi pi-fw pi-times',
+				command: (onclick)=> {console.log("funcion 2a xD")},
 				routerLink:['/home']
 			}
 		];

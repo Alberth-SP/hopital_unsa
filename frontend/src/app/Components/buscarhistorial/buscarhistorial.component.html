@@ -10,23 +10,23 @@
 <p [hidden]="opcionSeleccionado == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p>->
 
 
-<!BUSCAR CITA-->
+<!BUSCAR historial-->
 <style>
-	table {
-		font-family: arial, sans-serif;
-		border-radius: 5px;
-		width: 100%;
-	}
+    table {
+        font-family: arial, sans-serif;
+        border-radius: 5px;
+        width: 100%;
+    }
 
-	td,
-	th {
-		border: 1px solid #dddddd;
-		text-align: left;
-		padding: 8px;
-	}
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
 
-	tr:nth-child(even) {
-		background-color: #dddddd;
+    tr:nth-child(even) {
+        background-color: #dddddd;
     }
 
     .button {
@@ -119,19 +119,19 @@
 <h3>Datos del Paciente</h3> 
 
 <table>
-	<tr>
-		<th>Paciente</th>
-		<th>DNI</th> 
+    <tr>
+        <th>Paciente</th>
+        <th>DNI</th> 
 
-	</tr>
-	<tr>
-			<td>{{ paciente }}</td>
-			<td>{{ dni }}</td>
-<!-- 
-            <td><button class="button modi" (click)="clickcrear()" >{{Crear Cita}}</button></td> -->
+    </tr>
+    <tr>
+            <td>{{ paciente }}</td>
+            <td>{{ dni }}</td>
+
+           <td><button class="button modi" (click)="clickcrear()" >{{Crear}}</button></td>
             
 
-	</tr>
+    </tr>
  
 </table>
 <br><br>
@@ -139,7 +139,7 @@
 
  
 
-<!--FIN BUSCAR CITA--> 
+<!--FIN BUSCAR historial--> 
   
 
 
