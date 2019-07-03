@@ -10,23 +10,23 @@
 <p [hidden]="opcionSeleccionado == '0'">Haz seleccionado la opción # {{ verSeleccion }}</p>->
 
 
-<!BUSCAR historial-->
+<!BUSCAR CITA-->
 <style>
-    table {
-        font-family: arial, sans-serif;
-        border-radius: 5px;
-        width: 100%;
-    }
+	table {
+		font-family: arial, sans-serif;
+		border-radius: 5px;
+		width: 100%;
+	}
 
-    td,
-    th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
+	td,
+	th {
+		border: 1px solid #dddddd;
+		text-align: left;
+		padding: 8px;
+	}
 
-    tr:nth-child(even) {
-        background-color: #dddddd;
+	tr:nth-child(even) {
+		background-color: #dddddd;
     }
 
     .button {
@@ -83,15 +83,16 @@
 <script> </script>
 <br><br>
 
-<h1 align=center> MÓDULO DE ADMISIÓN  </h1>
+<h1 align=center> ADMISIÓN  </h1>
 <br><br>
-<h1 class="ve">Buscar Historial</h1>
+<h1 class="ve">Buscar Cita</h1>
 <table bordercolor="#FFFFFF">
         
           <tr>
         
             <td >
                 <select class="op"name="singleSelect" ng-model="data.singleSelect">
+                    <option value="DNI">DNI</option>
                     <option value="numHistoria">Numero de Historia</option>
                     <option value="nombrepac">Nombre de paciente</option> 
                 </select>
@@ -99,7 +100,7 @@
             <td >
                  <span class="ui-float-label">
                 <input id="capturabusqueda" type="text" size="80" pInputText> 
-                <label for="float-input" font-size=100% >Ingrese los datos de la opción elegida</label>
+                <label for="float-input" font-size=100% >Ingrese los datos de la opcion elegida</label>
                  </span>                         
             </td>
             <td >
@@ -116,22 +117,23 @@
 
 <br><br>
 
-<h3>Datos del Paciente</h3> 
+<h3>Resultados Encontrados</h3> 
 
 <table>
-    <tr>
-        <th>Paciente</th>
-        <th>DNI</th> 
+	<tr>
+		<th>Paciente</th>
+		<th>DNI</th>
+		<th>Especialidad</th>
+		<th>Fecha</th> 
 
-    </tr>
-    <tr>
-            <td>{{ paciente }}</td>
-            <td>{{ dni }}</td>
+	</tr>
+	<tr>
+			<td>{{ paciente }}</td>
+			<td>{{ dni }}</td>
+			<td>{{ especialidad }}</td>
+            <td>{{ fecha}}</td>             
 
-           <td><button class="button modi" (click)="clickcrear()" >{{Crear}}</button></td>
-            
-
-    </tr>
+	</tr>
  
 </table>
 <br><br>
@@ -139,10 +141,7 @@
 
  
 
-<!--FIN BUSCAR historial--> 
+<!--FIN BUSCAR CITA--> 
   
-
-
-
 
 

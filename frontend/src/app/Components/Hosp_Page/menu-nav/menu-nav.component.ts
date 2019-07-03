@@ -15,28 +15,40 @@ export class MenuNavComponent implements OnInit {
 			{
 				label: 'Modulo Admision',
 				icon: 'pi pi-fw pi-file',
-				command: (onclick)=> {console.log("funciona xD")},
-				items: [
-					{
-						label: 'Buscar Historial',
-						icon: 'pi pi-search',
-						routerLink:['./buscarhistorial'],
-						command: (onclick)=> {console.log("Buscar xD")}
+				command: (onclick) => { console.log("funciona xD") },
+				items: [{
+					label: 'Historial',
 
-						
-					},
-					{
-					label: 'Buscar Historia Clinica',
-					icon: 'pi pi-search',
-					//submenus 
 					items: [
-						{ label: 'No se que mas poner xD' },
-						{ label: 'Holi' },
+						{
+							label: 'Buscar Historia Clinica',
+							icon: 'pi pi-search',
+							routerLink: ['/buscarhistorial']
+						},
+						{
+							label: 'Crear Historia Clinica',
+							routerLink: ['/crear-historial-clinico-form']
+						},
+						{ separator: true },
 					]
 				},
-				{ label: 'Crear Historia Clinica' },
-				{ separator: true },
-				{ label: 'Quit' }
+				//Submenu de Cita 
+				{
+					label: 'Citas',
+
+					items: [
+						{
+							label: 'Busqueda de Citas',
+							icon: 'pi pi-search',
+							routerLink: ['/buscarcita']
+						},
+						{
+							label: 'Crear Cita',
+							routerLink: ['/crearcita']
+						},
+					]
+				}
+
 				]
 			},
 			{
@@ -56,7 +68,7 @@ export class MenuNavComponent implements OnInit {
 			// ejemplo de tuteo desde el menu, antes deben agregarlos en app-routing.module
 			{
 				label: 'Home', icon: 'pi pi-fw pi-times',
-				routerLink:['/home']
+				routerLink: ['/home']
 			}
 		];
 	}

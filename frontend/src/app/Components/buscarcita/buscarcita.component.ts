@@ -3,20 +3,22 @@ import {NgModule}     from '@angular/core';
 import {RouterModule} from '@angular/router';
 
 @Component({
-  selector: 'app-buscarhistorial',
-  templateUrl: './buscarhistorial.component.html',
-  styleUrls: ['./buscarhistorial.component.css']
+  selector: 'app-buscarcita',
+  templateUrl: './buscarcita.component.html',
+  styleUrls: ['./buscarcita.component.css']
 })
-export class BuscarhistorialComponent implements OnInit {
+export class BuscarcitaComponent implements OnInit {
 
   paciente:string;
   dni:string;
-  crear:string;
+  especialidad:string;
+  fecha:string; 
 
   constructor() {
     this.paciente=" ";
     this.dni=" ";
-    this.crear=" ";
+    this.especialidad=" ";
+    this.fecha=" "; 
    }
 
 
@@ -27,13 +29,11 @@ export class BuscarhistorialComponent implements OnInit {
         alert("Buscando ... ");
         this.paciente="PACIENTE";
         this.dni="DNI";
-        this.crear="Crear";
+        this.especialidad="MEDICINA";
+        this.fecha="FECHA" ; 
   }
 
-  clickcrear(){
-    alert("Crear")
-  }
-
+ 
 }
 
 
