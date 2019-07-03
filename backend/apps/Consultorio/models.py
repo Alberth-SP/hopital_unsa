@@ -63,7 +63,7 @@ class Cita(models.Model):
 
 
     def __str__(self):
-        return str(self.codigoCita)
+        return '%s %s %s %s %s' %(self.codigoCita, self.numeroRecibo, self.historia,self.fechaAtencion , self.turno )
 
 class Consulta(models.Model):
     codigoConsulta = models.AutoField(primary_key=True)
