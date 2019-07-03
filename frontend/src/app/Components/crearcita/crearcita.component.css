@@ -1,0 +1,38 @@
+table {
+    border: 5px solid black;
+    box-align:center;
+    border-spacing: 10px;
+  }
+td{
+    text-align: center;
+    width: 70px;
+}
+.boton_personalizado{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    text-align: right;
+  }
+  .button {
+    background-color: #467DEC;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-family: "verdana";
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    }
+    .button1:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }

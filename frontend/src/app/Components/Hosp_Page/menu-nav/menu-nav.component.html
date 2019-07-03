@@ -1,0 +1,19 @@
+<!-- Menu Horizontal -->
+<p-toolbar>
+	<div class="ui-toolbar-group-left ">
+
+		<button pButton type="button" (click)="visibleSidebar1 = true" icon="pi pi-arrow-right"></button>
+	</div>
+
+	<div class="ui-toolbar-group-right">
+
+		<h3 style="font-weight:normal"><i class="fas fa-clinic-medical"></i> Hospital</h3>
+	</div>
+</p-toolbar>
+<!-- Menu Vertical -->
+<p-sidebar [(visible)]="visibleSidebar1" [baseZIndex]="10000">
+	<div>
+		<h3><i class="fas fa-first-aid fa-2x"></i> Menu inicial</h3>
+	</div>
+	<p-slideMenu [model]="items" [viewportHeight]="250"></p-slideMenu>
+</p-sidebar>
