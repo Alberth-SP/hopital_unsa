@@ -16,7 +16,7 @@ class HorarioCab(models.Model):
 
 class HorarioDet(models.Model):
     #FK HORARIO
-    codigoHor= models.ForeignKey(HorarioCab, on_delete=models.CASCADE,null=True)
+    codigoHor = models.OneToOneField(HorarioCab, on_delete=models.CASCADE)
     #FK PERSONAL
     
     dia = models.CharField(max_length=12)
@@ -71,8 +71,9 @@ class Paciente(models.Model):
     #FK Provincia
     provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE,blank=True,null=True)
     #FK Departamento
-    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE,blank=True,null=True)
-    dni = models.IntegerField(unique=True)
+    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
+
+    dni = models.IntegerField()
     nombres = models.CharField(max_length=30)
     apellido_paterno = models.CharField(max_length=30)
     apellido_materno = models.CharField(max_length=30)
@@ -92,14 +93,7 @@ class Paciente(models.Model):
     email = models.EmailField(unique=True,blank=True,null=True)
     estReg = models.CharField(max_length=1)
 
-    def __str__(self):
-        return self.nombres + " "+self.apellido_paterno+" "+self.apellido_materno
-
-class  HistoriaCab(models.Model):
+class HistoriaCab(models.Model):
     numeroHistoria = models.IntegerField(primary_key=True)
     #FK PACIENTE
-    paciente = models.OneToOneField(Paciente, on_delete=models.CASCADE,null=True)
-
-    def __str__(self):
-        return str(self.numeroHistoria)
-   
+    paciente = models.OneToOneField(Paciente, on_delete=models.CASCADE)

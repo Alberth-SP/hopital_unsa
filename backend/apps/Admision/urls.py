@@ -1,12 +1,10 @@
-from django.conf.urls import url
+
+from .views import *
 from django.urls import path
-from rest_framework.urlpatterns import format_suffix_patterns
-from apps.Admision.views import listaCitas, reservarCita
-
-
 urlpatterns = [
-    url('listar', listaCitas.as_view(),name = "listacitas"),
-    url('reservar', reservarCita.as_view() ,name = "reservacita")
+    path('grupsang/', GrupSangList.as_view(), name='grupsang'),
+    path('distrito/', DistritoList.as_view(), name='distrito'),
+    path('provincia/', ProvinciaList.as_view(), name='provincia'),
+    path('departamento/', DepartamentoList.as_view(), name='departamento'),
+    path('paciente/', PacienteList.as_view(), name='paciente')
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)
